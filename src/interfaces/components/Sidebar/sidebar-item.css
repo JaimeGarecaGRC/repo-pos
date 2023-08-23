@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base{
+    .sidebar-single-item{
+        @apply w-full h-10 pr-2 flex flex-row justify-between items-center
+         rounded-lg cursor-pointer
+        hover:text-black
+    }
+    .sidebar-menu-item{
+        @apply w-full h-16 pr-2 flex flex-row justify-between
+         items-center rounded-xl
+         hover:bg-neutral-300 hover:text-black
+    }
+
+    .sidebar-item-name{
+        @apply  font-sans
+    }
+    .sidebar-sub-menu{
+        @apply flex flex-col space-y-3 ml-16
+    }
+}

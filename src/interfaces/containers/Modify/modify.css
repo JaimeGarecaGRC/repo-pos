@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+     /* create froms */
+     .form-one-column-modify{
+        @apply flex flex-col w-full mx-4 max-w-[600px] 
+    }
+    .form-one-column-modify div label{
+        @apply  md:text-lg font-semibold w-full md:w-[40%]
+    }
+    .form-item-wrapper-modify{
+        @apply flex flex-col md:flex-row  md:items-center
+    }
+    .form-item-wrapper-modify div input{
+        @apply w-full h-10 mb-2 mt-1 px-4 rounded-lg text-xl shadow-md border border-gray-500
+    }
+    .form-toggle-wrapper{
+        @apply flex flex-col md:flex-row h-10 mb-2 mt-1 items-center
+    }
+    .form-toggle-wrapper div input{
+        @apply daisy-toggle daisy-toggle-md justify-self-center mb-2 mt-1
+    }
+
+    .invalid-input{
+        @apply border border-red-600
+    }
+
+}

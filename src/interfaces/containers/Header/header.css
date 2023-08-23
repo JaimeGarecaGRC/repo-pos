@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    .header{
+        @apply w-full h-header fixed top-0 right-0 left-0 z-10
+            flex flex-row items-center justify-between
+             text-white  bg-secundary 
+    }
+    .navbar-icon{
+        @apply mr-8 ml-4 h-8
+    }
+}

@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    .sidebar{
+        @apply w-sidebar h-screen fixed top-header left-0 px-2 z-10
+        text-black flex flex-col drop-shadow-xl
+    }
+    .sidebar-title{
+        @apply font-bold font-sans px-6
+    }
+    .sidebar-item-icon{
+        @apply h-5 w-5
+    }
+}
+

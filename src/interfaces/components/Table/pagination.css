@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+    /* TABLE */
+    table{
+        @apply w-full  text-left border-collapse sm:border border-gray-500
+    }
+    thead{
+        @apply text-gray-800
+    }
+    th{
+        @apply py-3 px-6
+    }
+    tbody tr{
+        @apply  hover:bg-base-200
+    }
+    td{
+        @apply py-2 px-4
+    }
+    .button-pagination{
+         @apply px-2 py-1 mt-0 border rounded-md
+        bg-white text-sm
+    }
+    .pagination-number{
+        @apply px-2 py-1 mt-0 border rounded-md
+        text-sm
+    }

@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    /* BOTONES */
+    .button-primary{
+        @apply daisy-btn daisy-btn-primary
+        /*bg-secundary text-white  cursor-pointer*/
+        /*       min-h-fit rounded-lg shadow-md font-bold text-sm*/
+    }
+    .button-secondary{
+        @apply daisy-btn daisy-btn-secondary
+        /*text-black cursor-pointer*/
+        /*min-h-fit rounded-lg shadow-md*/
+        /*        font-bold text-sm*/
+    }
+    .button-small{
+        @apply daisy-btn-sm w-full sm:min-w-fit sm:max-w-[16rem] my-2
+        /*w-full sm:max-w-[16rem] sm:min-w-fit h-8 min-h-fit my-2 px-2*/
+    }
+    .button-medium{
+        @apply daisy-btn-md w-full sm:min-w-fit sm:max-w-[16rem] my-2
+        /*w-full sm:w-fit h-12 min-h-fit my-2 px-3 py-1 sm:py-3*/
+    }
+
+    .icon {
+        @apply h-6 px-1
+    }
+    .link {
+        @apply text-sm underline cursor-pointer
+    }
+
+    /* LOGIN */
+    .login-input{
+        @apply w-full daisy-input daisy-input-bordered shadow-md
+
+    }
+    .login-page-content{
+        @apply grid w-full min-h-screen bg-accent place-items-center content-center px-6 py-8
+    }
+   /* CONTENIDO DE PÁGINA */
+    .page-content{
+        @apply w-full h-full min-h-screen py-6 px-4
+    }
+    .page-title{
+        @apply text-3xl font-semibold
+    }
+    .page-title-wrapper{
+        @apply flex flex-col sm:flex-row sm:items-center sm:flex-wrap justify-around sm:justify-between gap-4 mb-2
+    }
+
+    /* create froms */
+    .form-one-column{
+        @apply flex flex-col w-full mx-4 max-w-[600px]
+    }
+    .form-item-wrapper{
+        @apply flex flex-col md:flex-row  md:items-center text-sm
+    }
+    .form-one-column div label{
+        @apply    w-full md:w-[40%] daisy-label-text
+    }
+    .form-one-column div input{
+        @apply w-full daisy-input daisy-input-sm daisy-input-bordered my-2 border-gray-400 shadow-sm
+        /*h-10 mb-2 mt-1 px-4 rounded-lg  shadow-md border*/
+    }
+    .invalid-input{
+        @apply border border-red-600
+    }
+
+
+
+    /* FILTERS */
+    /* Filtro con nombre en la parte superior */
+    .filter-input-box{
+        @apply w-full sm:w-56 h-10 relative my-2
+                grid grid-rows-1
+    }
+    .filter-input-box label{
+        @apply absolute -top-3 left-2 bg-white px-2 daisy-label-text
+    }
+    .filter-input-box input{
+        @apply h-full w-full px-4 text-sm daisy-input daisy-input-bordered
+    }
+    /*otros elementos de los filtros*/
+    .filter-input {
+        @apply w-full sm:w-56 daisy-input h-10 daisy-input-bordered    text-sm
+    }
+    .filter-date-picker {
+        @apply w-full sm:w-56 daisy-input text-sm
+        /*sm:min-w-fit sm:max-w-fit min-h-fit h-10 max-h-full my-0*/
+    }
+    .filter-label{
+        @apply daisy-label-text daisy-label font-semibold
+    }
+    .filter-select{
+        @apply w-full sm:w-56 text-sm
+    }
+
+}
