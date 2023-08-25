@@ -8,14 +8,14 @@ import AppContext from '../../../context/AppContext'
 
 
 const TransactionTable = () => {
- 
+
   const {
     transactionsData, 
     tableColumns,
     setRowsPerPage,
     currentPage,
     setCurrentPage,} = useContext(TransactionContext);
- 
+
   const pageNumberLimit = 10;
   const [maxPageLimit, setMaxPageLimit] = useState(pageNumberLimit);
   const [minPageLimit, setMinPageLimit] = useState(0);
@@ -36,7 +36,7 @@ const TransactionTable = () => {
           minPageLimit = { minPageLimit}
           setMinPageLimit = { setMinPageLimit}
           />
-           <p>Total de elementos: {transactionsData.totalItems.toString() || "Cargando..."}</p>
+          <p>Total de elementos: {transactionsData.totalItems.toString() || "Cargando..."}</p>
       </div>
 
       <MyTable
@@ -57,10 +57,9 @@ const TransactionTable = () => {
           minPageLimit = { minPageLimit}
           setMinPageLimit = { setMinPageLimit}
           />
-           <p>Total de elementos: {transactionsData.totalItems.toString() || "Cargando..."}</p>
+          <p>Total de elementos: {transactionsData.totalItems.toString() || "Cargando..."}</p>
       </div>
     </div>
-   
   );
 };
 

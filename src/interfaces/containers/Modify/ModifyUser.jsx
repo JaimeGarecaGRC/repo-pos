@@ -12,7 +12,7 @@ import postApiData from '../../../api/postApiData';
 const ModifyUser = ({item, onClose}) => {
     //variables para la conexión con la api
     const { updateUserUrl, getUserInfoById, setError, reload} = useContext(AppContext);
-   
+
 
 
     const initialValues = {
@@ -32,13 +32,13 @@ const ModifyUser = ({item, onClose}) => {
 
  //Encontrar datos del usuario seleccionado
     const [userData, setUserData] = useState(initialValues);
-   
+
     useEffect(() => {
         const findUserUrl = getUserInfoById(item.id)
         getApiData(findUserUrl, setError)
         .then((response) => {
             if (response?._metadata.status) {
-                setUserData( fromDBSchemaToUser(response.data))
+                setUserData( fromDBSchemaToUser(response.data));
             } 
         })
     }, [])
@@ -76,7 +76,7 @@ const ModifyUser = ({item, onClose}) => {
             position: userDB.employee.position,
             phone: userDB.employee.phone,
             userType: userDB.userType,
-            rolesId: userDB.rolesId,
+            roleId: userDB.roleId,
             businessId: userDB.businessId,
             branchId: userDB.branchId,
         })
@@ -98,7 +98,7 @@ const ModifyUser = ({item, onClose}) => {
             },
             userType: values.userType,
             username: values.username,
-            rolesId: values.rolesId,
+            roleId: values.roleId,
             businessId: values.businessId,
             branchId: values.branchId,
         }

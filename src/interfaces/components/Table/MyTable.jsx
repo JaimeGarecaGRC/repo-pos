@@ -4,7 +4,7 @@ import TableActions from "@components/TableActions";
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
 
 const MyTable = ({ columns, data, isLoading, manualPagination = false,
-                     actionRow = false, handleModify = null, handleDelete = null }) => {
+                actionRow = false, handleModify = null, handleDelete = null }) => {
 
     const columnData = useMemo(() => columns, [columns]);
     const rowData = useMemo(() => data, [data]);

@@ -20,7 +20,8 @@ const UsersTable = () => {
     const {
         setShowModifyModal,
         setSelectedUser,
-           setShowDropModal} = useContext(UserContext)
+        setShowDropModal} = useContext(UserContext)
+        
     const handleModify = (user) => {
         setSelectedUser(user);
         setShowModifyModal(true);

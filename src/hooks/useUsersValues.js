@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const useUsersValues = () => {
-    //modalrs
+    //modals
     const [showModifyModal, setShowModifyModal] = useState(false);
     const [showCreateModal, setShowCreateModal] = useState(false);
     const [selectedUser, setSelectedUser] = useState(null);

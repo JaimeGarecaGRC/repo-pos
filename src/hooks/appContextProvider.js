@@ -4,6 +4,7 @@ import AppContext from "../context/AppContext";
 const AppContextProvider = ({children}) => {
 
     const baseUrl =  "http://localhost:9000/api/";
+    // const baseUrl = "http://servilinkapi.aquinot.com/api/";
     //LOGIN
     const authenticatedUserDetailUrl = baseUrl + "auth/details";
     const loginUrl = baseUrl + "auth/login";
@@ -175,9 +176,9 @@ const AppContextProvider = ({children}) => {
     };
     
     return(
-       <AppContext.Provider value={appValues}>
-           {children}
-       </AppContext.Provider>
+        <AppContext.Provider value={appValues}>
+            {children}
+        </AppContext.Provider>
     );
 }
 

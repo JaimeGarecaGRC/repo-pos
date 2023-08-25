@@ -12,7 +12,7 @@ const BaseLayout = ({children}) => {
     const auth = useAuth();
     const {
         error,
-       errorManager,
+        errorManager,
         showModal,
         setShowModal,
         setError,

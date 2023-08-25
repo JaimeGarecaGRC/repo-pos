@@ -60,7 +60,7 @@ const Users = () => {
     useEffect(() => {
         getApiData(getListRolesUrl, setError).then((response) => {
             if (response._metadata?.status) {
-               userValues.setRolesSelection((prevState)=>({
+                userValues.setRolesSelection((prevState)=>({
                     ...prevState,
                     data: userValues.formatRoles(response.data),
                 }))
@@ -109,8 +109,8 @@ const Users = () => {
                     show={userValues.showDropModal}
                     onClose={()=>userValues.setShowDropModal(false)} >
                         <DeleteUser
-                             item = { userValues.selectedUser }
-                             onClose={()=>userValues.setShowDropModal(false)} />
+                            item = { userValues.selectedUser }
+                            onClose={()=>userValues.setShowDropModal(false)} />
                 </Modal>
 
 

@@ -5,7 +5,7 @@ const postApiData = async (url, postData, setError) => {
     try{
         const { data, status } = await axios.post(url, postData, { withCredentials: true });
         if (status >=200 && status < 300) {
-           return data;
+            return data;
         }
     } catch (error) {
         if (error.response) {
