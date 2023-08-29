@@ -24,7 +24,6 @@ const DropdownMenu = ({title, listItems, setItemSelected}) => {
                     <ChevronDownIcon className='icon'/>
                 }
             </button>
-           
             {listOpen && 
             (
                 <ul className='absolute w-56 z-10 bg-primary p-0 m-0 border border-neutral-600 pt-2'>

@@ -6,7 +6,7 @@ import postApiData from '../../api/postApiData';
 
 const LoginGoogleAuth = () => {
     const navigate = useNavigate();
-   
+  
     //login logic
     const {
       loggedUser,
@@ -41,7 +41,7 @@ const LoginGoogleAuth = () => {
       })
     }
 
-   useEffect(() => {
+  useEffect(() => {
     if (error?.response.status === 400){
       setErrorMessage( "Código incorrecto")
     }
