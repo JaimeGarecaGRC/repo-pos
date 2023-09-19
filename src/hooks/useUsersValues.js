@@ -4,6 +4,7 @@ const useUsersValues = () => {
     //modals
     const [showModifyModal, setShowModifyModal] = useState(false);
     const [showCreateModal, setShowCreateModal] = useState(false);
+    const [showUserDataModal, setShowUserDataModal] = useState(false);
     const [selectedUser, setSelectedUser] = useState(null);
     const [showDropModal, setShowDropModal] = useState(false);
 
@@ -103,6 +104,8 @@ const useUsersValues = () => {
 
 
     return {
+        showUserDataModal, 
+        setShowUserDataModal,
         showModifyModal,
         setShowModifyModal,
         userTypesSelection,

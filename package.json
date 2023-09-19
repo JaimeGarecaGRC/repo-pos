@@ -15,7 +15,6 @@
     "@heroicons/react": "^2.0.0",
     "@progress/kendo-react-dropdowns": "^5.5.0",
     "axios": "^0.27.2",
-    "daisyui": "^2.42.1",
     "formik": "^2.2.9",
     "html-loader": "^4.1.0",
     "postcss-loader": "^7.0.1",

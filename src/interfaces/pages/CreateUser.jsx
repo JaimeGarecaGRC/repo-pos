@@ -94,11 +94,14 @@ const CreateUser = () => {
         }
     }
 
-   
     const handleBack = (event) => {
         event.preventDefault();
         navigate(-1)
     }
+    
+    useEffect(() => {
+        console.log(selectedUserType.value);
+    },[selectedUserType?.value])
 
     return (
         <>
@@ -120,7 +123,10 @@ const CreateUser = () => {
                         handleBack={handleBack}
                         handleSubmit={handleSubmit}
                         rolesSelection={rolesSelection}
-                        setRolesSelection={setRolesSelection} />
+                        setRolesSelection={setRolesSelection} 
+                        userTypeInfo={{userTypesSelection, setSelectedUserType}}
+                        
+                        />
                 }
                 {
                     selectedUserType?.value === "POS" &&
@@ -128,7 +134,9 @@ const CreateUser = () => {
                         handleBack={handleBack}
                         handleSubmit={handleSubmit}
                         rolesSelection={rolesSelection}
-                        setRolesSelection={setRolesSelection} />
+                        setRolesSelection={setRolesSelection} 
+                        userTypeInfo={{userTypesSelection, setSelectedUserType}}
+                    />
                 }
 
                 <Modal

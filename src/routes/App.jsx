@@ -13,27 +13,32 @@ import Home from "../interfaces/pages/Home";
 import Sectors from "@pages/Sectors";
 import Reports from "@pages/Reports";
 import CreateSector from "@pages/CreateSector";
+import Branch from "../interfaces/pages/Branch";
+import Services from "../interfaces/pages/Services";
+import Business from "../interfaces/pages/Business";
 
 const App = () => {
   const initialState = AppContextProvider();
   return(
     <AppContext.Provider value={initialState}>
-    <BrowserRouter>
-      <Routes>
-          <Route exact path="/" element={ <BaseLayout/> } >
-            <Route path="Users" element= {<Users />} ></Route>
-            <Route path="CreateUser" element= {<CreateUser />} />
-            <Route path="Transactions" element= {<Transactions />} />
-              <Route path="Sectors" element={ <Sectors/>} />
-              <Route path="Sectors" element={ <Sectors/>} />
-              <Route path="CreateSector" element={<CreateSector />} />
-              <Route path="Reports" element={<Reports />} />
-            <Route path="home" element ={<Home />} />
-          </Route>
-          <Route exact path="Login" element={ <Login/> } />
-          <Route exact path="LoginAuth" element={ <LoginGoogleAuth /> } />
-      </Routes>
-    </BrowserRouter>
+      <BrowserRouter>
+        <Routes>
+            <Route exact path="/" element={ <BaseLayout/> } >
+              <Route path="Users" element= {<Users />} ></Route>
+              <Route path="CreateUser" element= {<CreateUser />} />
+              <Route path="Transactions" element= {<Transactions />} />
+                <Route path="Sectors" element={ <Sectors/>} />
+                <Route path="CreateSector" element={<CreateSector />} />
+                <Route path="Reports" element={<Reports />} />
+                <Route path="Branch" element={<Branch />} />
+                <Route path="Services" element={<Services />} />
+                <Route path="Business" element={<Business />} />
+              <Route path="home" element ={<Home />} />
+            </Route>
+            <Route exact path="Login" element={ <Login/> } />
+            <Route exact path="LoginAuth" element={ <LoginGoogleAuth /> } />
+        </Routes>
+      </BrowserRouter>
     </AppContext.Provider>
   );
 };

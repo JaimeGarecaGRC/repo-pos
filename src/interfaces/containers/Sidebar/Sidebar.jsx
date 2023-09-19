@@ -6,7 +6,10 @@ import {
     UserIcon,
     DocumentIcon,
     ArrowsRightLeftIcon,
-    RectangleStackIcon } from "@heroicons/react/24/solid";
+    RectangleStackIcon, 
+    BuildingOffice2Icon,
+    BuildingStorefrontIcon,
+    CurrencyDollarIcon} from "@heroicons/react/24/solid";
 import SidebarItem from '../../components/Sidebar/SidebarItem';
 import {useAuth} from "../../../context/auth";
 
@@ -38,6 +41,21 @@ const Sidebar = () => {
             name: "Rubros",
             icon: <RectangleStackIcon className='sidebar-item-icon' />,
             route: "/sectors"
+        },
+        {
+            name: "Sucursales",
+            icon: <BuildingOffice2Icon  className='sidebar-item-icon' />,
+            route: "/branch"
+        },
+        {
+            name: "Comercios",
+            icon: <BuildingStorefrontIcon className='sidebar-item-icon' />,
+            route: "/business"
+        },
+        {
+            name: "Servicios",
+            icon: <CurrencyDollarIcon  className='sidebar-item-icon' />,
+            route: "/services"
         },
         // {
         //     name: "Configuraciones",

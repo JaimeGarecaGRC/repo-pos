@@ -12,6 +12,7 @@ import useUsersValues from '../../hooks/useUsersValues';
 import DeleteUser from '../containers/Delete/DeleteUser';
 import postApiData from '../../api/postApiData';
 import getApiData from "../../api/getApiData";
+import ProfileUser from '../containers/Profile/ProfileUser';
 
 const Users = () => {
     
@@ -96,6 +97,14 @@ const Users = () => {
 
                 <UserFilters setFilters={setFilters} />
                 <UsersTable />
+
+                <Modal 
+                    show={userValues.showUserDataModal}
+                    onClose={()=>userValues.setShowUserDataModal(false)}>
+                    <ProfileUser
+                        item = { userValues.selectedUser }
+                        onClose={()=>{userValues.setShowUserDataModal(false)}} />
+                </Modal>
 
                 <Modal 
                     show={userValues.showModifyModal}

@@ -6,8 +6,9 @@ import Select from 'react-select'
 import AppContext from '../../../context/AppContext';
 import getApiData from '../../../api/getApiData';
 import useUsersValues from "../../../hooks/useUsersValues";
+import SelectForm from '../../components/Form/SelectForm';
 
-const CreateUserWeb = ({ handleBack, handleSubmit, rolesSelection, setRolesSelection }) => {
+const CreateUserWeb = ({ handleBack, handleSubmit, rolesSelection, setRolesSelection, userTypeInfo }) => {
 
 
     const {  setError, getListRolesUrl, } = useContext(AppContext);
@@ -32,8 +33,6 @@ const CreateUserWeb = ({ handleBack, handleSubmit, rolesSelection, setRolesSelec
             }
         });
     }, []);
-
-   
 
     const handleRol =(option) => {
         setRolesSelection((prevState) => ({
@@ -82,6 +81,26 @@ const CreateUserWeb = ({ handleBack, handleSubmit, rolesSelection, setRolesSelec
                     return (
                         <Form onSubmit={handleSubmit} className="form-one-column">
                             <h1 className='text-2xl font-semibold self-center mb-3'>Usuario Web</h1>
+
+                            {/* <div className="form-item-wrapper">
+                                <label>Tipo de Usuario:</label>
+                                <div className='w-full h-full flex flex-col'>
+                                <Select
+                                    options={userTypeInfo.userTypesSelection}
+                                    placeholder="Seleccione el tipo de usuario"
+                                    className="w-full sm:w-56"
+                                    onChange={(optionSelected) => userTypeInfo.setSelectedUserType(optionSelected)}
+                                />
+                                </div>
+                            </div> */}
+
+                            <SelectForm 
+                                itemList={userTypeInfo.userTypesSelection}
+                                labelName={"Tipo de Usuario:"}
+                                stateSetter={userTypeInfo.setSelectedUserType}
+                                actualValue={"WEB"}
+                            />
+
                             <div className="form-item-wrapper">
                                 <label>Nombre:</label>
                                 <div className='w-full h-full flex flex-col'>
@@ -152,7 +171,8 @@ const CreateUserWeb = ({ handleBack, handleSubmit, rolesSelection, setRolesSelec
                                     <Select
                                         options={rolesSelection.data}
                                         className="w-full"
-                                        onChange={handleRol} />
+                                        onChange={handleRol} 
+                                    />
                                 </div>
                             </div>
 

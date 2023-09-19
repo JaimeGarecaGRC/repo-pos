@@ -18,10 +18,16 @@ const UsersTable = () => {
     const [minPageLimit, setMinPageLimit] = useState(0);
 
     const {
+        setShowUserDataModal,
         setShowModifyModal,
         setSelectedUser,
         setShowDropModal} = useContext(UserContext)
-        
+
+
+    const handleProfile = (user) => {
+        setSelectedUser(user);
+        setShowUserDataModal(true);
+    }
     const handleModify = (user) => {
         setSelectedUser(user);
         setShowModifyModal(true);
@@ -53,6 +59,7 @@ const UsersTable = () => {
                         columns={tableColumns}
                         isLoading={usersData.isLoading}
                         actionRow={true}
+                        handleProfile={handleProfile}
                         handleModify={handleModify}
                         handleDelete={handleDelete}
                 />

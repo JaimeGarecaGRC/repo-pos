@@ -12,11 +12,14 @@ import useUsersValues from "../hooks/useUsersValues";
 import CreateUser from "@pages/CreateUser";
 import NotFound from "@pages/NotFound";
 import CreateSector from "@pages/CreateSector";
+import Branch from '../interfaces/pages/Branch';
+import Business from '../interfaces/pages/Business';
+import Services from '../interfaces/pages/Services';
 
 
 
 const App2 = () => {
-   return (
+    return (
         <>
             <HashRouter>
                 <AppContextProvider>
@@ -53,6 +56,24 @@ const App2 = () => {
                                     </AuthRoute>
                                 }/>
 
+                                <Route exact path="/branch" element={
+                                    <AuthRoute>
+                                        <Branch />
+                                    </AuthRoute>
+                                }/>
+
+                                <Route exact path="/business" element={
+                                    <AuthRoute>
+                                        <Business />
+                                    </AuthRoute>
+                                }/>
+
+                                <Route exact path="/services" element={
+                                    <AuthRoute>
+                                        <Services />
+                                    </AuthRoute>
+                                }/>
+
                                 <Route path="/login" element={
                                     <OnlyPublicRoute>
                                         <Login/>
@@ -61,7 +82,7 @@ const App2 = () => {
                                 <Route path="*" element={<NotFound/>}/>
                             </Routes>
                         </BaseLayout>
-                      </AuthProvider>
+                    </AuthProvider>
                 </AppContextProvider>
 
 
